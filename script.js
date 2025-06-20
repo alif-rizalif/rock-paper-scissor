@@ -18,3 +18,45 @@ function getHumanChoice() {
 // Declare the score variables
 let humanScore = 0;
 let computerScore = 0;
+
+// Write the logic to play a single round
+function playRound(humanChoice, computerChoice) {
+  humanChoice = humanChoice.toLowerCase();
+  console.log(`Player : ${humanChoice},\nComputer : ${computerChoice}`);
+  if (humanChoice == computerChoice) return console.log("Result is DRAW!");
+  if (humanChoice == "rock") {
+    if (computerChoice == "paper") {
+      console.log("You LOSE! Paper beats Rock");
+      humanScore++;
+    }
+    if (computerChoice == "scissor") {
+      console.log("You WIN! Rock beats Scissor");
+      computerScore++;
+    }
+  }
+  if (humanChoice == "paper") {
+    if (computerChoice == "rock") {
+      console.log("You WIN! Paper beats Rock");
+      humanScore++;
+    }
+    if (computerChoice == "scissor") {
+      console.log("You LOSE! Scissor beats Paper");
+      computerScore++;
+    }
+  }
+  if (humanChoice == "scissor") {
+    if (computerChoice == "rock") {
+      console.log("You LOSE! Rock beats Scissor");
+      computerScore++;
+    }
+    if (computerChoice == "paper") {
+      console.log("You WIN! Scissor beats Paper");
+      humanScore++;
+    }
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
