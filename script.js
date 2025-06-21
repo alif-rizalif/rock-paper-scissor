@@ -6,6 +6,7 @@ function playGame() {
 
   // Write the logic to play a single round
   function playRound() {
+    console.log("===== Round Begins =====");
     // Create function to get the human choice
     function humanInput() {
       const inputUser = prompt(
@@ -62,13 +63,25 @@ function playGame() {
     }
 
     console.log(`Score :\nPlayer = ${humanScore}\nComputer = ${computerScore}`);
+    console.log("===== Round Ends =====");
   }
 
   playRound();
   playRound();
   playRound();
   playRound();
-  playRound();
+
+  let result = "";
+  if (humanScore == computerScore) {
+    result = "Player and Computer is DRAW!";
+  }
+  if (humanScore > computerScore) {
+    result = "Player WIN the games";
+  } else {
+    result = "Computer WIN the games";
+  }
+
+  console.log(`##### Game Results #####\n${result}`);
 }
 
 playGame();
