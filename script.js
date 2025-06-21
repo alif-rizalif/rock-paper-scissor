@@ -66,10 +66,9 @@ function playGame() {
     console.log("===== Round Ends =====");
   }
 
-  playRound();
-  playRound();
-  playRound();
-  playRound();
+  for (let i = 1; i <= 4; i++) {
+    playRound();
+  }
 
   let result = "";
   if (humanScore == computerScore) {
