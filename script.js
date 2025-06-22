@@ -1,4 +1,4 @@
-alert("Welcome to the RPS Game\n(Rock, Paper, Scissor)");
+// alert("Welcome to the RPS Game\n(Rock, Paper, Scissor)");
 
 // Add Rock Button
 const btnRock = document.querySelector("#rock");
