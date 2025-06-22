@@ -12,10 +12,10 @@
         <div class="score-area">
             <div class="score-player score-board">
                 <p class="score-title">Player</p>
-                <p id="number-player" class="score-number">3</p>
+                <p id="number-player" class="score-number">0</p>
             </div>
             <div class="score-computer score-board">
-                <p id="number-computer" class="score-number">1</p>
+                <p id="number-computer" class="score-number">0</p>
                 <p class="score-title">Computer</p>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 <p>Computer</p>
             </div>
             <div class="computer-turn">
-                <p id="computer-choice">PAPER</p>
+                <p id="computer-choice">?</p>
             </div>
         </div>
 
@@ -38,11 +38,22 @@
         <!-- PLAYER AREA -->
         <div class="player-area">
             <div class="player-turn">
-                <p id="player-choice">ROCK</p>
+                <p id="player-choice">?</p>
             </div>
             <div class="player-title">
                 <p>Player</p>
             </div>
+        </div>
+
+        <!-- REMAINING TURN AREA -->
+        <div class="remain-turn">
+            <p class="remain-text">Remaining Turn : <span id="remain-number">5</span></p>
+        </div>
+
+        <!-- RESULT AND PLAY AGAIN -->
+        <div id="result-area" class="d-none">
+            <div id="result-text"></div>
+            <div id="btn-refresh"></div>
         </div>
 
         <!-- BUTTON AREA -->
